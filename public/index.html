@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AI Chat Widget — Demo (Acme Cloud)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/chat.css">
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #131316; color: #f2f2f2; }
+    .wrap { max-width: 680px; margin: 0 auto; padding: 72px 24px 120px; }
+    h1 { font-size: 34px; margin: 0 0 10px; }
+    .lead { color: #b9b9c2; line-height: 1.6; font-size: 17px; }
+    .cta { display: inline-block; margin: 22px 0 0; cursor: pointer; border: none; font-size: 15px; font-weight: 600; padding: 13px 22px; border-radius: 10px; background: #2563eb; color: #fff; }
+    .cta:hover { background: #1d4ed8; }
+    .note { margin-top: 40px; padding: 16px 18px; border: 1px solid #2c2c33; border-radius: 12px; color: #8a8a93; font-size: 14px; line-height: 1.6; }
+    section { margin-top: 56px; }
+    h2 { font-size: 20px; }
+    a { color: #6ea8ff; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Acme Cloud</h1>
+    <p class="lead">
+      A demo page for the grounded AI chat widget. Click the bot in the corner
+      (or the button below) and ask about the product, pricing, or getting started.
+      The assistant answers <strong>only</strong> from the knowledge base in
+      <code>functions/knowledge/</code>.
+    </p>
+
+    <button class="cta" data-aichat-open>Ask the Acme assistant</button>
+
+    <div class="note">
+      ⚙️ The widget POSTs to <code>/api/chat</code>, so answers require the Cloud
+      Function running (deployed, or via the Firebase emulator with an Anthropic
+      key). Without a backend the widget loads fine but shows a friendly error on
+      send. See the README for setup.
+    </div>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>This is where your contact form would go. The widget links here when a
+      visitor needs a human.</p>
+    </section>
+  </main>
+
+  <script type="module" src="js/chat.js"></script>
+</body>
+</html>
